@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>CustomComponentActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+CustomComponentActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">kr.co.company.customcomponent; 
+ 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.ActionBarActivity; 
+ 
+ 
+</span><span class="s0">public class </span><span class="s1">CustomComponentActivity </span><span class="s0">extends </span><span class="s1">ActionBarActivity { 
+ 
+    </span><span class="s2">/** Called when the activity is first created. */</span><span class="s1"> 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.main); 
+ 
+        VolumeControlView view = (VolumeControlView)findViewById(R.id.volume); 
+        view.setKnobListener(</span><span class="s0">new </span><span class="s1">VolumeControlView.KnobListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onChanged(</span><span class="s0">double </span><span class="s1">angle) { 
+ 
+                </span><span class="s0">if </span><span class="s1">(angle &gt; </span><span class="s3">0</span><span class="s1">) 
+                    ; </span><span class="s2">// 오른쪽으로 회전</span><span class="s1"> 
+                </span><span class="s0">else</span><span class="s1"> 
+                    ; </span><span class="s2">// 왼쪽으로 회전</span><span class="s1"> 
+ 
+            } 
+        }); 
+    } 
+ 
+} 
+</span></pre>
+</body>
+</html>

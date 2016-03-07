@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>VolumeControlView.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+VolumeControlView.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">kr.co.company.customcomponent; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Context; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Canvas; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Paint; 
+</span><span class="s0">import </span><span class="s1">android.util.AttributeSet; 
+</span><span class="s0">import </span><span class="s1">android.view.MotionEvent; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.ImageView; 
+ 
+</span><span class="s0">public class </span><span class="s1">VolumeControlView </span><span class="s0">extends </span><span class="s1">ImageView </span><span class="s0">implements </span><span class="s1">View.OnTouchListener  { 
+ 
+    </span><span class="s0">private double </span><span class="s1">angle = </span><span class="s2">0.0</span><span class="s1">; 
+    </span><span class="s0">private </span><span class="s1">KnobListener listener; 
+    </span><span class="s0">float </span><span class="s1">x, y; 
+    </span><span class="s0">float </span><span class="s1">mx, my; 
+ 
+    </span><span class="s0">public interface </span><span class="s1">KnobListener { 
+        </span><span class="s0">public void </span><span class="s1">onChanged(</span><span class="s0">double </span><span class="s1">angle); 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setKnobListener(KnobListener lis ) 
+    { 
+        listener = lis; 
+    } 
+ 
+    </span><span class="s0">public  </span><span class="s1">VolumeControlView(Context context) { 
+        </span><span class="s0">super</span><span class="s1">(context); 
+        </span><span class="s0">this</span><span class="s1">.setImageResource(R.drawable.knob); 
+        </span><span class="s0">this</span><span class="s1">.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+    } 
+ 
+    </span><span class="s0">public  </span><span class="s1">VolumeControlView(Context context, AttributeSet attrs) 
+    { 
+        </span><span class="s0">super</span><span class="s1">(context, attrs); 
+        </span><span class="s0">this</span><span class="s1">.setImageResource(R.drawable.knob); 
+        </span><span class="s0">this</span><span class="s1">.setOnTouchListener(</span><span class="s0">this</span><span class="s1">); 
+    } 
+ 
+    </span><span class="s0">private double </span><span class="s1">getAngle(</span><span class="s0">float </span><span class="s1">x, </span><span class="s0">float </span><span class="s1">y) 
+    { 
+        mx = x - (getWidth() / </span><span class="s2">2.0f</span><span class="s1">); 
+        my = (getHeight() / </span><span class="s2">2.0f</span><span class="s1">) - y; 
+ 
+        </span><span class="s0">double </span><span class="s1">degree = Math.atan2(mx, my) * </span><span class="s2">180.0 </span><span class="s1">/ </span><span class="s2">3.141592</span><span class="s1">; 
+        </span><span class="s0">return </span><span class="s1">degree; 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public boolean </span><span class="s1">onTouch(View v, MotionEvent event) { 
+        x = event.getX(</span><span class="s2">0</span><span class="s1">); 
+        y = event.getY(</span><span class="s2">0</span><span class="s1">); 
+        angle = getAngle(x, y); 
+        invalidate(); 
+        listener.onChanged(angle); 
+ 
+        </span><span class="s0">return true</span><span class="s1">; 
+    } 
+ 
+    </span><span class="s0">protected void </span><span class="s1">onDraw(Canvas c) 
+    { 
+        Paint paint = </span><span class="s0">new </span><span class="s1">Paint(); 
+        c.save(); 
+        c.rotate((</span><span class="s0">float</span><span class="s1">)angle, getWidth()/</span><span class="s2">2</span><span class="s1">, getHeight()/</span><span class="s2">2</span><span class="s1">); 
+        </span><span class="s0">super</span><span class="s1">.onDraw(c); 
+        c.restore(); 
+    } 
+}</span></pre>
+</body>
+</html>

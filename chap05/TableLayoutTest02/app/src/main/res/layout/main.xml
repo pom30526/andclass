@@ -1,0 +1,17 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableRow>
+        <TextView android:text="주소"/>
+        <EditText android:text="서울시 종로구 1120"/>
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="이름"/>
+        <EditText android:text="홍길동"/>
+    </TableRow>
+
+    <Button  android:text="완료"/>
+
+</TableLayout>
