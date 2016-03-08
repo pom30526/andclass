@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:elevation="10dp"
+        android:background="@drawable/myrect"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Cost"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:elevation="10dp"
+        android:background="@drawable/myrect"/>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Expenses"
+        android:id="@+id/button"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_marginTop="31dp"
+        android:layout_alignEnd="@+id/seekBar" />
+
+</RelativeLayout>
