@@ -1,4 +1,26 @@
 수업내용
+android 위젯사용법
+xml 방식 java code 방식
+혼용방식
+
+findViewbyid <-- 핵심 api
+
+Object -> view -> button -> textview 계층도
+
+view 크기 match  부모와 동일 warp 자기자신에 맞추어
+
+가로보기 방식 고정 
+
+RGB 색깔조정
+
+투명도 가능 visible 
+
+padding -> component size 커짐
+margin -> 주변공간이 커짐
+
+
+
+단톡방 초대하기
 
 김담
 성치헌
