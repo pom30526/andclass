@@ -1,32 +1,32 @@
-¼ö¾÷³»¿ë
-android À§Á¬»ç¿ë¹ý
-xml ¹æ½Ä java code ¹æ½Ä
-È¥¿ë¹æ½Ä
+ìˆ˜ì—…ë‚´ìš©
+android ìœ„ì ¯ì‚¬ìš©ë²•
+xml ë°©ì‹ java code ë°©ì‹
+í˜¼ìš©ë°©ì‹
 
-findViewbyid <-- ÇÙ½É api
+findViewbyid <-- í•µì‹¬ api
 
-Object -> view -> button -> textview °èÃþµµ
+Object -> view -> button -> textview ê³„ì¸µë„
 
-view Å©±â match  ºÎ¸ð¿Í µ¿ÀÏ warp ÀÚ±âÀÚ½Å¿¡ ¸ÂÃß¾î
+view í¬ê¸° match  ë¶€ëª¨ì™€ ë™ì¼ warp ìžê¸°ìžì‹ ì— ë§žì¶”ì–´
 
-°¡·Îº¸±â ¹æ½Ä °íÁ¤ 
+ê°€ë¡œë³´ê¸° ë°©ì‹ ê³ ì • 
 
-RGB »ö±òÁ¶Á¤
+RGB ìƒ‰ê¹”ì¡°ì •
 
-Åõ¸íµµ °¡´É visible 
+íˆ¬ëª…ë„ ê°€ëŠ¥ visible 
 
-padding -> component size Ä¿Áü
-margin -> ÁÖº¯°ø°£ÀÌ Ä¿Áü
+padding -> component size ì»¤ì§
+margin -> ì£¼ë³€ê³µê°„ì´ ì»¤ì§
 
 
 
-´ÜÅå¹æ ÃÊ´ëÇÏ±â
+ë‹¨í†¡ë°© ì´ˆëŒ€í•˜ê¸°
 
-±è´ã
-¼ºÄ¡Çå
-Á¤ÁÖÈñ
-Á¶¹ÎÁö
-È«±¤¹Î
-È²»óÈñ
-Á¶ÈÖ¿µ
-Á¶¼ö¿µ
+ê¹€ë‹´
+ì„±ì¹˜í—Œ
+ì •ì£¼í¬
+ì¡°ë¯¼ì§€
+í™ê´‘ë¯¼
+í™©ìƒí¬
+ì¡°íœ˜ì˜
+ì¡°ì†Œì˜ì˜
